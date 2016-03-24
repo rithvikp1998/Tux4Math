@@ -1,0 +1,172 @@
+#indexPanel1{
+	background-color: #1565c0; 
+	color: #fff; 
+	font-family: 'Indie Flower',cursive;
+	font-size: 32px; 
+}
+
+#indexPanel2{
+	background-color: #009688; 
+	color: #fff; 
+	font-family: 'Indie Flower',cursive;
+	font-size: 32px; 
+}
+
+#hi{
+	font-family: 'Indie Flower', cursive;
+	font-size: 64px;
+	margin-left: 24px;
+	margin-top: 70px;
+	color: #e91e63;
+}
+
+#welcome{
+	font-family: 'Indie Flower', cursive;
+	font-size: 24px;
+	margin-left: 20px;
+	margin-right: 10px;	
+}
+
+.learnPagebtn{
+	background-color:  #009688;
+	font-family: 'Indie Flower', cursive;
+	font-size: 32px;
+	width: 30%;
+	margin-left: 30%;
+	color: #fff;
+	margin-top: 10px;
+	
+}
+.learn{
+	font-family: 'Indie Flower', cursive;
+	font-size: 32px;
+	margin-top: 70px;
+	margin-left: 10px;
+	color: #006064;
+}
+.navbtn{
+	color: grey;
+}
+.pageHeading{
+	font-family: 'Indie Flower', cursive;
+	font-size: 48px;
+	margin-top: 70px;
+	margin-left: 10px;
+	color: #006064;	
+}
+.subTrick{
+	font-family: 'Indie Flower', cursive;
+	font-size: 40px;
+	margin-left: 32px;
+	color: #3f51b5;	
+}
+.info{
+	margin-left: 32px;
+	font-size: 16px;
+}
+.formula{
+	margin-left: 32px;
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+.step{
+	font-family: 'Indie Flower', cursive;
+	font-size: 40px;
+	margin-left: 32px;
+	color: #f06292;
+}
+.quiz{
+	font-family: 'Indie Flower', cursive;
+	font-size: 40px;
+	margin-left: 32px;
+	color: #42a5f5;	
+}
+.colName{
+	font-family: 'Indie Flower', cursive;
+	font-size: 40px;
+	color: #00e676;
+}
+.colContent{
+	font-size: 16px;
+}
+.submitButton{
+	font-family: 'Indie Flower', cursive;
+	font-size: 24px;
+	margin-left: 20%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+.answerButton{
+	font-family: 'Indie Flower', cursive;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;	
+}
+.resultImage{
+	height: 16px;
+	width: 16px;
+}
+.resultImage2{
+	height: 32px;
+	width: 32px;
+}
+.example{
+	font-family: 'Indie Flower', cursive;
+	font-size: 40px;
+	margin-left: 32px;
+	color: #26a69a;
+}
+.question{
+	margin-top: 30px;
+}
+.operator{
+	font-family: 'Indie Flower', cursive;
+	font-size: 96px;
+	color: #009688;
+}
+
+.number{
+	font-family: 'Indie Flower', cursive;
+	font-size: 96px;
+	color: #009688;
+}
+
+#ansArea{
+	font-family: 'Indie Flower', cursive;
+	font-size: 64px;
+	color: #009688;
+	height: 96px;
+	margin-top: 40px;	
+}
+.ansAreaSquare{
+	font-family: 'Indie Flower', cursive;
+	font-size: 64px;
+	color: #009688;
+	height: 96px;
+	margin-top: 20px;
+}
+
+.info2{
+	font-size: 24px;
+	font-family: 'Indie Flower', cursive;
+	margin-left: 30px;
+}
+.statement{
+	font-family: 'Indie Flower', cursive;
+	font-size: 48px;
+	color: #009688;
+	margin-top: 32px;	
+}
+
+.submitButton2{
+	font-family: 'Indie Flower', cursive;
+	font-size: 24px;
+	margin-left: 20%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background-color: #009688; 
+	color: #fff;
+}

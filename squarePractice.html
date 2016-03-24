@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Squaring Practice - Tux4Math</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel='stylesheet' href="css/googleFont.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/squarePractice.js"></script>
+</head>
+<script>
+  $(function(){
+      $("#header").load("header.html"); 
+    });
+</script>
+<body>
+	<div id="header"></div>
+  <div class="pageHeading">Practice - Squaring a Number</div>
+	<p class="info">We hope you have gone through the 'Square a number' trick which helps you square a number very quicky. If not please go through it <a href="square.html">here</a>.</p> 
+	<div class="step">How to Play</div>
+	<p class="info2">The game is divided into 3 parts, each part will complement each sub-trick you have learnt. The three parts are named accordingly. In each part, you will have a number on your left. You have to square it and give the answer on your right. The questions will get tougher as you go. Enjoy learing!</p>
+  <div class="subTrick">Sub-trick 1</div>
+  <p class="info">In this part, all the numbers have a unit digit 5</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 colName">Number</div>
+      <div class="col-xs-6 colName">Square</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 number" id="number1">5</div>
+      <div class="col-xs-3">
+        <div class="input-group">
+            <input type="text" class="form-control ansAreaSquare" id="ansArea1">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="check1()">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="next1()">Next</button>
+      <img id="ansImg1" class="resultImage2"/>
+    </div>
+  </div>
+  <div class="subTrick">Sub-trick 2</div>
+  <p class="info">In this part, all the numbers are closer to a base.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 colName">Number</div>
+      <div class="col-xs-6 colName">Square</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 number" id="number2">1</div>
+      <div class="col-xs-3">
+        <div class="input-group">
+            <input type="text" class="form-control ansAreaSquare" id="ansArea2">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="check2()">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="next2()">Next</button>
+      <img id="ansImg2" class="resultImage2"/>
+    </div>
+  </div>
+  <div class="subTrick">Sub-trick 1</div>
+  <p class="info">In this part, any number can come.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 colName">Number</div>
+      <div class="col-xs-6 colName">Square</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 number" id="number3">7</div>
+      <div class="col-xs-3">
+        <div class="input-group">
+            <input type="text" class="form-control ansAreaSquare" id="ansArea3">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="check3()">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="next3()">Next</button>
+      <img id="ansImg3" class="resultImage2"/>
+    </div>
+  </div>
+</body>
+</html>

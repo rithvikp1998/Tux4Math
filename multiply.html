@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication - Tux4Math</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel='stylesheet' href="css/googleFont.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/multiply.js"></script>
+</head>
+<script>
+  $(function(){
+      $("#header").load("header.html"); 
+    });
+</script>
+<body>
+  <div id="header"></div>
+  <h1 class="pageHeading">Multiplication it is then!</h1>
+  <div class="step">Intro</div>
+  <p class="info">The following method can be used to multiply any two numbers. But the method is most effective when both the numbers are closer to a base. If you don't know or don't remember what a base is, then go through our tutorial <a href="base.html">here</a>.</p>
+  <div class="step">Step 1</div>
+  <p class="info">Once you have two numbers, let the numbers be 'n1' and 'n2'. Find a base that is closer to both the numbers. Find the deviations of both the numbers from the base and let the deviations 'd1' and 'd2'. Proceed to the next step with these numbers.</p>
+  <div class="step">Step 2</div>
+  <p class="info">Now, we have two numbers and two deviations. Now take deep breaths and follow the instructions slowly. Take either 'n1+d1' or 'n2+d2'. You will realise both are the same. To this add the same number of zeroes that are in your base. Let the number be 'x'. Now multiply 'd1' and 'd2' and add the product to the 'x'. If you didn't get it, don't worry. Just go through the following example.</p>
+  <div class="example">Example 1</div>
+  <div class="info">Let the numbers be 7 and 8, i.e n1 = 7 and n2 = 8. The base that is closer to both the numbers is 10. The deviation of 7 from 10 is -3 i.e.d1 = -3. The deviation of 8 from 10 is -2, i.e. d2 = -2.<br><br>n1 = 7<br>n2 = 8<br>Base = 10<br>d1 = -3<br>d2 = -2<br>n1+d2 = 5 = n2+d1 :)<br>The number of zeroes in our base is 1. So, let's add one zero to the sum n1+d2(or n2+d1) which means x = 50<br>d1 * d2 = 6<br>The final answer is 50 + 6 i.e. 56!<br><br>In examples 2 and 3, you have to fill in the blanks. You can submit the answers and also check the correct answers.</div>
+  <div class="example">Example 2</div>
+  <p class="info">Let the numbers be 13 and 12. Let n1 = 13 and n2 = 12</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">n1</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="1">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="10" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">n2</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="2">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="11" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="3">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="12" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">d1</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="4">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="13" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">d2</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="5">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="14" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">n1+d2(or n2+d1)</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="6">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="15" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="7">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="16" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">d1 * d2</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="8">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="17" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Final Answer</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="9">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="18" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults1()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers1()" type="button" style="visibility: hidden" id="answerbtn1">Check Answers</button>
+      <p id="answerSheet1"></p>
+    </div>
+  </div>
+  <div class="example">Example 3</div>
+  <p class="info">Let the numbers be 98 and 103. Let n1 = 98 and n2 = 103. Please note that the product 'd1 * d2' can be negative</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">n1</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="19">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="28" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">n2</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="20">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="29" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="21">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="30" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">d1</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="22">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="31" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">d2</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="23">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="32" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">n1+d2(or n2+d1)</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="24">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="33" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="25">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="34" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">d1 * d2</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="26">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="35" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Final Answer</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="27">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="36" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults2()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers2()" type="button" style="visibility: hidden" id="answerbtn2">Check Answers</button>
+      <p id="answerSheet2"></p>
+    </div>
+  </div>
+  <div class="step">What next?</div>
+  <p class="info">Congratulations! You have successfully learnt a new trick that will improve your speed in Math. We hope you enjoyed learning this trick. So, What next? No trick is good enough if you don't practice it well. You can practice this trick in real time by jumping to the practice section by using the button below. Remember, 'Practice Makes Man Perfect'. Behind every magic trick, there is some backstage work involved that is concealed by the magician. Similarly, behind every Math trick, there is some math going on backstage which is reason for the trick to work everytime. You can learn what's happening behind the scenes by clicking on 'Learn The Math Behind' button.</p>
+  <div class="container">
+    <div class="row">
+      <a class="btn btn-primary submitButton2" href="multiplyPractice.html">Practice</a>
+      <button type="button" class="btn btn-primary submitButton2" data-toggle="modal" data-target="#math">Learn The Math Behind</button>
+    </div>
+  </div>
+  <div id="math" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Math Behind 'Quick Multiplication'</h4>
+            </div>
+            <div class="modal-body"><p>Let the numbers be 'n1' and 'n2'. Let the base be 'b'. Let the deviations be 'd1' and 'd2'.<br><br>Deviation = Number - Base  i.e. Number = Base + Deviation<br>n1 = b + d1<br>n2 = b + d2<br><br>n1 * n2 = (b + d1) * (b + d2)<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= b*b + b*d1 + b*d2 + d1*d2<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= b * (b + d1 + d2) + d1 * d2<br><br>b + d1 + d2 = n1 + d2 = n2 + d1<br><br>Therefore, n1 * n2 = b * (n1 + d2) + d1 * d2 = b * (n2 + d1) + d1 * d2.<br><br>We assumed x = b * (n1 +d2)  = b * (n2 + d1)<br>We also assumed y = d1 * d2<br><br>Therefore, n1 * n2 = x + y</p></div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

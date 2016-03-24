@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Base - Tux4Math</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel='stylesheet' href="css/googleFont.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/base.js"></script>
+</head>
+<script>
+  $(function(){
+      $("#header").load("header.html"); 
+    });
+</script>
+<body>
+  <div id="header"></div>
+  <div class="pageHeading">Bases and Deviations</div>
+  <div class="step">Intro</div>
+  <p class="info"> A base is anything that is power of 10. For example, 10, 100, 1000, 10000 etc. are all bases, whereas 45, 52, 4560, 56600, 404 etc. are not. The deviation of a number from a base is equal to the difference of number from the base. For example, the deviation of number 14 from base 10 is 14 - 10 = 4. Please note that deviations can be negative also. For example, the deviation of number 96 from base 100 is 96 - 100 = -4.</p>
+  <div class="formula"> Deviation = Number - Base</div>
+  <p class="info">Bases and Deviations are commonly used in the tricks that you are going to learn here. So, it is a good idea to learn bases and deviations thoroughly. Take the following quizzes to learn about bases and deviations thoroughly.</p>
+<div class="quiz">Quiz</div>
+  <p class="info">There are two numbers given to your left. You have to select a base that is closer to both of the given numbers and type in the boxes to the right. After you have completed the questions, click on 'Submit' to submit your answers. Good Luck!</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 colName">Numbers</div>
+      <div class="col-xs-6 colName">Base</div>
+    </div>
+    <div class="row">  
+      <div class="col-xs-5 colContent">9, 11</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="1">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="9" class="resultImage"/></div>
+    </div>
+    <div class="row">  
+      <div class="col-xs-5 colContent">8, 14</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="2">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="10" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5 colContent">13, 10</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="3">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="11" class="resultImage"/></div>
+    </div>
+    <div class="row">  
+      <div class="col-xs-5 colContent">92, 96</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="4">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="12" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5 colContent">102, 104</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="5">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="13" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5 colContent">107, 102</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="6">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="14" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5 colContent">987, 1005</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="7">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="15" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5 colContent">1001, 1005</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="8">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="16" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults1()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers1()" type="button" style="visibility: hidden" id="answerbtn1">Check Answers</button>
+      <p id="answerSheet1"></p>
+    </div>
+  </div>
+  <div class="quiz">Quiz</div>
+  <p class="info">In the left most column, you have a number. In the middle column, you have a base which is the nearest base to the number. In the right most column, you have an imput bar where you can answer the deviation of the number from the base. If deviation is 3, type 3 and if deviation is -3 type -3. After you have completed the questions, click on 'Submit' to submit your answers. Good Luck!</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 colName">Number</div>
+      <div class="col-xs-3 colName">Base</div>
+      <div class="col-xs-3 colName">Deviation</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 colContent">12</div>
+      <div class="col-xs-3 colContent">10</div>
+      <div class="col-xs-3 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="17">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="22" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 colContent">9</div>
+      <div class="col-xs-3 colContent">10</div>
+      <div class="col-xs-3 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="18">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="23" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 colContent">92</div>
+      <div class="col-xs-3 colContent">100</div>
+      <div class="col-xs-3 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="19">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="24" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 colContent">111</div>
+      <div class="col-xs-3 colContent">100</div>
+      <div class="col-xs-3 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="20">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="25" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 colContent">991</div>
+      <div class="col-xs-3 colContent">1000</div>
+      <div class="col-xs-3 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="21">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="26" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults2()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers2()" type="button" style="visibility: hidden" id="answerbtn2">Check Answers</button>
+      <p id="answerSheet2"></p>
+    </div>
+  </div>
+</body>
+</html>

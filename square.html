@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Square a number - Tux4Math</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel='stylesheet' href="css/googleFont.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/square.js"></script>
+</head>
+<script>
+  $(function(){
+      $("#header").load("header.html"); 
+    });
+</script>
+<body>
+	<div id="header"></div>
+  <div class="pageHeading">Squaring a number quickly...</div>
+  <div class="step">Intro</div>
+  <div class="info">Squaring a number is a frequently used operation. Learning how to do it quickly is a good advantage to have. We have divided this trick into 3 sub-tricks. The first sub-trick is used to find the square of any number with a unit digit 5 i.e. 5, 15, 35, 105, 1365 etc. The second sub-trick can be used to find the square of a number that is closer to a base. (If you don't know what a base is, then please go through our tutorial <a href="base.html">here</a>.) The third sub-trick can be used for any number. So, let's start learning.</div>
+  <div class="subTrick">Sub-trick 1</div>
+  <p class="info"> This trick is used to find the square of any number with unit digit 5 i.e. 5, 35, 175, 1675 etc. Treat the number you are given as 'x5'. I mean, if number is 15, then x is 1. If number is 35, then x is 3. If the number is 175, then x is 17. Similarly when the number is 1675, then x is 167. Now that you have your x, calculate 'x * (x+1)' i.e increment x by 1 and multiply it with x. For ex, if your number is 15, then x is 1 and 'x * (x+1)' is 2. Now write 'x * (x+1)' with 25 at the end. That's it, you have your answer. Go through the examples if you didn't understand the trick properly.</p>
+  <div class="example">Example 1</div>
+  <p class="info">Let the number be 35. Then x will be 3. 'x + 1' will be 4. 'x * (x + 1)' will be 12. Write 12 and then 25 i.e. 1225. That's it, the answer is 1225. The square of 35 is 1225. Use the calculator in the header to check if it's correct.</p>
+  <p class="info">In examples 2 and 3, you have questions on right and you have to fill their values on the left. You can submit them and also check the correct answers. Good Luck!</p>
+  <div class="example">Example 2</div>
+  <p class="info">Let the number be 75. Treat the number to be 'x5'.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">x</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="1">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="5" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x+1</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="2">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="6" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x * (x+1)</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="3">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="7" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Answer</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="4">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="8" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults1()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers1()" type="button" style="visibility: hidden" id="answerbtn1">Check Answers</button>
+      <p id="answerSheet1"></p>
+    </div>
+  </div>
+  <div class="example">Example 3</div>
+  <p class="info">Let the number be 145. Treat the number to be 'x5'.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">x</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="9">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="13" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x+1</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="10">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="14" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x * (x+1)</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="11">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="15" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Answer</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="12">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="16" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults2()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers2()" type="button" style="visibility: hidden" id="answerbtn2">Check Answers</button>
+      <p id="answerSheet2"></p>
+    </div>
+  </div>
+  
+  
+  <div class="step">Practice Sub-trick 1</div>
+  <p class="info">Congratulations! You have successfully learnt a new trick that will improve your speed in Math. We hope you enjoyed learning this trick. So, What next? No trick is good enough if you don't practice it well. You can practice this trick in real time by jumping to the practice section by using the button below. Behind every magic trick, there is some backstage work involved that is concealed by the magician. Similarly, behind every Math trick, there is some math going on backstage which is reason for the trick to work everytime. You can learn what's happening behind the scenes by clicking on 'Learn The Math Behind' button. Or, you can proceed to learn other subtricks.</p>
+  <div class="container">
+    <div class="row">
+      <a class="btn btn-primary submitButton2" href="squarePractice.html">Practice</a>
+      <button type="button" class="btn btn-primary submitButton2" data-toggle="modal" data-target="#math1">Learn The Math Behind</button>
+    </div>
+  </div>
+  <div id="math1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Math Behind 'Sub-trick 1'</h4>
+            </div>
+            <div class="modal-body"><p>We assumed the number to be 'x5'. In algebra, x5 = (x * 10) + 5<br><br>For example, 175 = x5 implies x = 17. 175 = (17 * 10) + 5 = (x * 10) + 5<br><br>Number<sup>2</sup> = ((x * 10) + 5)<sup>2</sup><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp = (x * 10)<sup>2</sup> + 2 * (x * 10) * 5 + 25<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp = 100 * x<sup>2</sup> + 100 * x + 25<br><br>Number<sup>2</sup> = 100 * x * (x + 1) + 25<br><br>'100 * x * (x + 1) + 25' is same as writing '25' at the end of 'x * (x + 1)'.<br><br>Therefore, square of Number is same as writing '25' at the end of 'x * (x + 1)'.</p></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="subTrick">Sub-trick 2</div>
+  <p class="info">This sub-trick is useful for finding the square of a number which is closer to a base. For example, 97 is closer to 100, 1007 is closer to 1000, 14 is closer to 10 and so on.</p>
+  <div class="step">Step 1</div>
+  <p class="info">For a given number, find the nearest base. Also find the deviation of the number from the base. If you don't know or don't remember bases and calculating deviations, then jump to our tutorial <a href="base.html">here.</a></p>
+  <div class="step">Step 2</div>
+  <p class="info">  Now, you have a number and a deviation from the nearest base. Add the number and the deviation. Let this sum be 'x'. Multiply the deviation with itself i.e. square it. Let this number be 'y'.(If the number is closer to a base, then the deviation, generally, will be less than 20. If not, treat 'squaring the deviation' as a new problem or use 'Quick Multiplication' trick to find the square.). The answer will be equal to '(x * base) + y'. Note that 'x * base' is same as writing the number of zeroes of base at the end of 'x'. If you didn't understand the trick properly, go through the examples below.</p>
+  <div class="example">Example 1</div>
+  <p class="info">Let the number be 103. The nearest base to 103 is 100. Deviation of 103 from 100 is 103 - 100 = 3. <br><br>Number = 103<br>Base = 100<br>Deviation = 3<br> x = Number + Deviation = 106 <br> x * Base = 10600<br> y = Square of Deviation = Square of 3 = 9.<br> Answer = 10609.<br><br>In examples 2 and 3, you have to fill in the blanks. You can submit the answers and also check the correct answers.</p>
+  <div class="example">Example 2</div>
+  <p class="info">Let the number be 1007</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">Number</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="17">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="24" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="18">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="25" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Deviation</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="19">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="26" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="20">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="27" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x * Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="21">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="28" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">y</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="22">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="29" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Answer</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="23">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="30" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults3()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers3()" type="button" style="visibility: hidden" id="answerbtn3">Check Answers</button>
+      <p id="answerSheet3"></p>
+    </div>
+  </div>
+  <div class="example">Example 3</div>
+  <p class="info">Let the number be 98. Please note that the deviation can be negtive also.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">Number</div>
+      <div class="col-xs-5 colContent">
+        <div class="input-group">
+          <input type="text" class="form-control" id="31">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="38" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="32">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="39" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Deviation</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="33">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="40" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="34">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="41" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x * Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="35">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="42" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">y</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="36">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="43" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Answer</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="37">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="44" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults4()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers4()" type="button" style="visibility: hidden" id="answerbtn4">Check Answers</button>
+      <p id="answerSheet4"></p>
+    </div>
+  </div>
+  
+  <div class="step">Practice Sub-trick 2</div>
+  <p class="info">Congratulations! You have successfully learnt a new trick that will improve your speed in Math. We hope you enjoyed learning this trick. So, What next? No trick is good enough if you don't practice it well. You can practice this trick in real time by jumping to the practice section by using the button below. Behind every magic trick, there is some backstage work involved that is concealed by the magician. Similarly, behind every Math trick, there is some math going on backstage which is reason for the trick to work everytime. You can learn what's happening behind the scenes by clicking on 'Learn The Math Behind' button. Or, you can proceed to learn other subtricks.</p>
+  <div class="container">
+    <div class="row">
+      <a class="btn btn-primary submitButton2" href="squarePractice.html">Practice</a>
+      <button type="button" class="btn btn-primary submitButton2" data-toggle="modal" data-target="#math2">Learn The Math Behind</button>
+    </div>
+  </div>
+  <div id="math2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Math Behind 'Sub-trick 2'</h4>
+            </div>
+            <div class="modal-body"><p>Let the number be 'n', the base be 'b', the deviation be 'd'.<br><br>Deviation = Number - Base<br>Number = Base + Deviation<br>n = b + d<br><br>n<sup>2</sup> = (b + d)<sup>2</sup><br> &nbsp &nbsp = b<sup>2</sup> + 2 * b * d + d<sup>2</sup><br>&nbsp &nbsp  = b * (b + 2 * d) + d<sup>2</sup><br> &nbsp &nbsp = b * (b + d + d) + d<sup>2</sup><br>&nbsp &nbsp  = b * (n + d) + d<sup>2</sup><br><br>We assumed 'n + d' to be 'x'.<br>We also assumed d<sup>2</sup> to be 'y'<br><br> Therefore Number<sup>2</sup> = x * Base + y</div></p>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="subTrick">Sub-trick 3</div>
+  <p class="info">Let's define a new term 'Pseudo Base' ('pseudo' means false, pronounced as 'seudo'). Pseudo base is multiple of a base. For example 400 is multiple of 100 and hence is a Psuedo Base. We use this trick when the number is not closer to any base in particular but closer to a Pseudo Base.</p>
+  <div class="step">Step 1</div>
+  <p class="info">Once you have a number, find a Pseudo Base that is closest to the given number. For example, if the number is 487, the Pseudo Base is 500, if the number is 893, the Pseudo Base is 900 and if the number is 71, the Pseudo Base is 70 and so on. Also, find the deviation of number from the Pseudo Base. Please note that for a number, there might exist more than one Pseudo Base. In such cases, we choose the pseudo base which simplifies our calculation. For example, if the number is 513, choosing 500 as Pseudo Base gives us much simpler calculation than choosing 600 as Pseudo Base</p>
+  <div class="step">Step 2</div>
+  <p class="info">Add the number and deviation. Let the result be 'x'. Multiply the deviation with itself i.e. square it. Let this number be 'y'.(If the number is closer to a base, then the deviation, generally, will be less than 20. If not, treat 'squaring the deviation' as a new problem or use 'Quick Multiplication' trick to find the square.). The answer will be equal to '(x * Pseudo Base) + y' . If you didn't understand the trick properly, don't worry and follow the examples given below.</p>
+  <div class="example">Example 1</div>
+  <p class="info">Let the number be 71. The nearest Pseudo Base to 71 is 70. Deviation of 71 from 70 is 71 - 70 = 1. <br><br>Number = 71<br>Pseudo Base = 70<br>Deviation = 1<br> x = Number + Deviation = 72 <br> x * Pseudo Base = 72 * 70 = (72 * 7) * 10 = 5040<br> y = Square of Deviation = Square of 1 = 1.<br> Answer = 5041.<br><br>In examples 2 and 3, you have to fill in the blanks. You can submit the answers and also check the correct answers.</p>
+  <div class="example">Example 2</div>
+  <p class="info">Let the number be 513</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">Number</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="45">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="52" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Pseudo Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="46">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="53" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Deviation</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="47">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="54" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="48">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="55" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x * Pseudo Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="49">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="56" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">y</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="50">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="57" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Answer</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="51">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="58" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults5()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers5()" type="button" style="visibility: hidden" id="answerbtn5">Check Answers</button>
+      <p id="answerSheet5"></p>
+    </div>
+  </div>
+  <div class="example">Example 3</div>
+  <p class="info">Let the number be 67. Here, we can choose either 60 or 70 as a Pseudo Base and with both the pseudo bases, the calculation doesn't vary much. Take the Pseudo Base as '70' to make sure your answers are consistent with the answers given to this example. Please note that with '70' as the Pseudo Base, you get a negative deviation. </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">Number</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="59">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="66" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Pseudo Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="60">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="67" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Deviation</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="61">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="68" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="62">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="69" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">x * Pseudo Base</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="63">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="70" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">y</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="64">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="71" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">Answer</div>
+        <div class="col-xs-5 colContent">
+        <div class="input-group">
+            <input type="text" class="form-control" id="65">
+        </div>
+      </div>
+      <div class="col-xs-1"><img id="72" class="resultImage"/></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary submitButton" onclick="displayResults6()" type="button">Submit</button>
+      <button class="btn btn-primary answerButton" onclick="displayAnswers6()" type="button" style="visibility: hidden" id="answerbtn6">Check Answers</button>
+      <p id="answerSheet6"></p>
+    </div>
+  </div>
+  <div class="step">Practice Sub-trick 3</div>
+  <p class="info">Congratulations! You have successfully learnt a new trick that will improve your speed in Math. We hope you enjoyed learning this trick. So, What next? No trick is good enough if you don't practice it well. You can practice this trick in real time by jumping to the practice section by using the button below. Remember, 'Practice Makes Man Perfect'. Behind every magic trick, there is some backstage work involved that is concealed by the magician. Similarly, behind every Math trick, there is some math going on backstage which is reason for the trick to work everytime. You can learn what's happening behind the scenes by clicking on 'Learn The Math Behind' button.</p>
+  <div class="container">
+    <div class="row">
+      <a class="btn btn-primary submitButton2" href="squarePractice.html">Practice</a>
+      <button type="button" class="btn btn-primary submitButton2" data-toggle="modal" data-target="#math">Learn The Math Behind</button>
+    </div>
+  </div>
+  <div id="math" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Math Behind 'Sub-trick 2'</h4>
+            </div>
+            <div class="modal-body"><p>Let the number be 'n', the pseudo base be 'b', the deviation be 'd'.<br><br>Deviation = Number - Base<br>Number = Base + Deviation<br>n = b + d<br><br>n<sup>2</sup> = (b + d)<sup>2</sup><br> &nbsp &nbsp = b<sup>2</sup> + 2 * b * d + d<sup>2</sup><br>&nbsp &nbsp  = b * (b + 2 * d) + d<sup>2</sup><br> &nbsp &nbsp = b * (b + d + d) + d<sup>2</sup><br>&nbsp &nbsp  = b * (n + d) + d<sup>2</sup><br><br>We assumed 'n + d' to be 'x'.<br>We also assumed d<sup>2</sup> to be 'y'<br><br> Therefore Number<sup>2</sup> = x * Pseudo Base + y</div></p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

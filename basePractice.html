@@ -1,0 +1,69 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>Bases Practice - Tux4Math</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel='stylesheet' href="css/googleFont.css">
+  	<link rel="stylesheet" href="css/style.css">
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/jquery.min.js"></script>
+  	<script src="js/basePractice.js"></script>
+</head>
+<script>
+  $(function(){
+      $("#header").load("header.html"); 
+    });
+</script>
+<body>
+	<div id="header"></div>
+	<div class="pageHeading">Practice - Bases and Deviation</div>
+	<p class="info">We hope you have gone through the 'Bases and Deviations' tutorial. If not please go through it <a href="base.html">here</a>.</p>
+	<div class="step">How to Play</div>
+	<div class="subTrick">Bases</div>
+	<p class="info2">The game is simple. Two numbers will be dispalyed on the left hand side and you have to find a base that is closer to both the numbers and give the answer on the right side. The questions will get tougher as you go. Enjoy learing!</p>
+	<div class="container">
+	    <div class="row">
+	      <div class="col-xs-6 colName">Numbers</div>
+	      <div class="col-xs-6 colName">Base</div>
+	    </div>
+	    <div class="row">
+	      <div class="col-xs-3 number" id="number1">9</div>
+	      <div class="col-xs-3 number" id="number2">11</div>
+	      <div class="col-xs-3">
+	        <div class="input-group">
+	            <input type="text" class="form-control ansAreaSquare" id="ansArea1">
+	        </div>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <button class="btn btn-primary submitButton" onclick="check1()">Submit</button>
+	      <button class="btn btn-primary answerButton" onclick="next1()">Next</button>
+	      <img id="ansImg1" class="resultImage2" style="visibility: hidden;" />
+	    </div>
+  	</div>
+  	<div class="subTrick">Deviations</div>
+  	<p class="info">In this game, you will be given a number and a base. You have to find the deviation of the number from the base.</p>
+  	<div class="container">
+	    <div class="row">
+	      <div class="col-xs-3 colName">Number</div>
+	      <div class="col-xs-3 colName">Base</div>
+	      <div class="col-xs-3 colName">Deviation</div>
+	    </div>
+	    <div class="row">
+	      <div class="col-xs-3 number" id="number3">13</div>
+	      <div class="col-xs-3 number" id="baseArea">10</div>
+	      <div class="col-xs-3">
+	        <div class="input-group">
+	            <input type="text" class="form-control ansAreaSquare" id="ansArea2">
+	        </div>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <button class="btn btn-primary submitButton" onclick="check2()">Submit</button>
+	      <button class="btn btn-primary answerButton" onclick="next2()">Next</button>
+	      <img id="ansImg2" class="resultImage2" style="visibility: hidden;" />
+	    </div>
+  	</div>
+</body>
+</html>

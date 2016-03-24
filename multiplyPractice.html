@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication Practice - Tux4Math</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel='stylesheet' href="css/googleFont.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+  	<script src="js/multiplyPractice.js"></script>
+</head>
+<script>
+  $(function(){
+      $("#header").load("header.html"); 
+    });
+</script>
+<body>
+	<div id="header"></div>
+	<div class="pageHeading">Practice - Multiplication</div>
+	<p class="info">We hope you have gone through the Quick Multiplication trick which helps you multiply two numbers very quicky. If not please go through it <a href="multiply.html">here</a>. 
+	<div class="step">How to Play</div>
+	<p class="info2">The game is simple. Two numbers will be dispalyed on the left hand side and you have to multiply them and give the answer on the right side. The questions will get tougher as you go. Enjoy learing!</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2 number" id="firstNum">1</div>
+			<div class="col-xs-2 operator">X</div>
+			<div class="col-xs-2 number" id="secondNum">1</div>
+			<div class="col-xs-2 operator">=</div>
+			<div class="col-xs-2">
+	        	<div class="input-group">
+	            	<input type="text" class="form-control" id="ansArea">
+	        	</div>
+	      	</div>
+		</div>
+		<div class="row">
+			<button class="btn btn-primary submitButton" onclick="check()">Submit</button>
+			<button class="btn btn-primary answerButton" onclick="next()">Next</button>
+			<img id="ansImg" class="resultImage2"/>
+		</div>	
+	</div>
+</body>
+</html>

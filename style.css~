@@ -1,0 +1,24 @@
+h1{
+	font-family: 'Indie Flower', cursive;
+	font-size: 64px;
+	margin-left: 24px;
+}
+
+h3{
+	font-family: 'Indie Flower', cursive;
+	font-size: 32px;
+	margin-left: 144px;
+	margin-bottom: 40px;
+}
+.btns{
+	background-color: #bdbdbd;
+	background-size: 144px;
+	width: 30%;
+	height: 150px;
+	font-size: 75px;
+	font-family: 'Indie Flower', cursive;
+	margin-left: 30%;
+	margin-top: 10px;
+	border-radius: 30px;
+	padding: 20px;
+}
