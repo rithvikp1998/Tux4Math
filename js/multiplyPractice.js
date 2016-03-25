@@ -14,10 +14,10 @@ function check(){
 	numB = document.getElementById("secondNum").innerHTML;
 	checkValue = document.getElementById("ansArea").value;
 	if(numA*numB==checkValue){
-		document.getElementById("ansImg").src = "tick.png";
+		document.getElementById("ansImg").src = "img/tick.png";
 		count++;
 	} else{
-		document.getElementById("ansImg").src = "cross.png";
+		document.getElementById("ansImg").src = "img/cross.png";
 	}
 }
 
